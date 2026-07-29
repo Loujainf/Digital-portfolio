@@ -114,7 +114,8 @@ nav ul li,
 }
 
 nav {
-    display: none;
+    display: block;
+}
 }
 
 /* ---------- HOME ---------- */
