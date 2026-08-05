@@ -716,8 +716,11 @@ footer {
     }
 
 }
-.project-link {
-    display: block;
-    width: fit-content;
+.project-link-row {
+    width: 100%;
     margin-top: 14px;
+}
+
+.project-link {
+    display: inline-block;
 }
