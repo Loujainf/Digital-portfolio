@@ -1,81 +1,50 @@
 function addHamburgerMenuEventListener() {
 
-    window.addEventListener(
-        "resize",
-        resetNavigation
-    );
-
+    window.addEventListener("resize", resetNavigation);
 
     document
         .getElementById("hamburger-menu")
-        .addEventListener(
-            "click",
-            toggleNavigation
-        );
-
+        .addEventListener("click", toggleNavigation);
 }
-
 
 
 function toggleNavigation() {
 
-    const mainNavigation =
-        document.getElementById(
-            "main-navigation"
-        );
-
+    const navigation =
+        document.getElementById("main-navigation");
 
     const display =
-        window
-            .getComputedStyle(mainNavigation)
-            .display;
+        window.getComputedStyle(navigation).display;
 
 
     if (display === "none") {
 
-        mainNavigation.style.display =
-            "block";
+        navigation.style.display = "block";
+
+    } else {
+
+        navigation.style.display = "none";
 
     }
-
-    else {
-
-        mainNavigation.style.display =
-            "none";
-
-    }
-
 }
-
 
 
 function resetNavigation() {
 
-    const minWidth = 1200;
+    const navigation =
+        document.getElementById("main-navigation");
 
 
-    const mainNavigation =
-        document.getElementById(
-            "main-navigation"
-        );
+    if (window.innerWidth >= 1200) {
 
+        navigation.style.display = "block";
 
-    if (window.innerWidth < minWidth) {
+    } else {
 
-        mainNavigation.style.display =
-            "none";
+        navigation.style.display = "none";
 
     }
-
-    else {
-
-        mainNavigation.style.display =
-            "block";
-
-    }
-
 }
-
 
 
 addHamburgerMenuEventListener();
