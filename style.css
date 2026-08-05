@@ -1,5 +1,5 @@
 /* ==================================
-   GENERAL
+   GENERAL PAGE SETTINGS
 ================================== */
 
 * {
@@ -17,8 +17,13 @@ body {
     background-color: #fff9fc;
     color: #654f5a;
 
-    font-family: "Nunito", sans-serif;
+    font-family: "Nunito", Arial, sans-serif;
 }
+
+
+/* ==================================
+   HEADINGS
+================================== */
 
 h1,
 h2,
@@ -51,6 +56,8 @@ nav {
     background-color: #ffdce9;
 
     padding: 1rem;
+
+    border-bottom: 1px solid #efbdd0;
 }
 
 nav ul {
@@ -58,6 +65,7 @@ nav ul {
     flex-direction: column;
 
     justify-content: center;
+    align-items: center;
 
     gap: 2rem;
 
@@ -82,7 +90,14 @@ nav a:hover {
     color: #d65f8e;
 }
 
+
+/* ==================================
+   HAMBURGER MENU
+================================== */
+
 #hamburger-menu {
+    display: block;
+
     margin: 1rem;
 
     padding: 8px 12px;
@@ -100,37 +115,55 @@ nav a:hover {
 
 
 /* ==================================
-   HOME
+   HEADER
 ================================== */
 
 #main-header {
-    background: linear-gradient(#fff5f8, #ffeaf2);
+    background: linear-gradient(
+        #fff5f8,
+        #ffeaf2
+    );
 }
 
+
+/* ==================================
+   HOME
+================================== */
+
 #home {
+    position: relative;
+
     display: flex;
-    flex-direction: column;
 
     justify-content: center;
     align-items: center;
 
-    gap: 3rem;
+    min-height: 500px;
 
-    min-height: 550px;
+    padding: 5rem 10%;
 
-    padding: 4rem 10%;
+    text-align: center;
+
+    overflow: hidden;
 }
 
 .home-text {
-    max-width: 600px;
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 750px;
 }
 
 .welcome {
-    color: #c46c8e;
+    margin-bottom: 1rem;
 
+    color: #b96586;
+
+    font-size: 0.9rem;
     font-weight: bold;
 
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 h1 {
@@ -138,13 +171,15 @@ h1 {
 
     color: #c85f88;
 
-    font-size: 4rem;
+    font-size: 4.5rem;
 
-    line-height: 1;
+    line-height: 1.05;
 }
 
 .intro {
-    margin: 1.5rem 0;
+    max-width: 600px;
+
+    margin: 1.5rem auto;
 
     color: #806874;
 
@@ -154,7 +189,9 @@ h1 {
 .project-button {
     display: inline-block;
 
-    padding: 12px 22px;
+    margin-top: 0.5rem;
+
+    padding: 12px 23px;
 
     background-color: #d9779d;
     color: white;
@@ -171,47 +208,33 @@ h1 {
 
 
 /* ==================================
-   HOME PICTURE
+   HOME FLOWERS
 ================================== */
 
-.home-picture {
-    position: relative;
-}
-
-.home-picture img {
-    width: 280px;
-    height: 330px;
-
-    object-fit: cover;
-
-    border: 8px solid white;
-    border-radius: 30px;
-
-    box-shadow: 0 10px 25px rgba(155, 83, 111, 0.18);
-}
-
-.flower {
+.home-flower {
     position: absolute;
 
-    font-size: 3.5rem;
+    font-size: 4rem;
+
+    opacity: 0.8;
 }
 
-.flower1 {
-    top: -25px;
-    right: -25px;
+.flower-left {
+    left: 8%;
+    bottom: 50px;
 }
 
-.flower2 {
-    bottom: -20px;
-    left: -30px;
+.flower-right {
+    right: 8%;
+    top: 50px;
 }
 
 
 /* ==================================
-   SECTION TITLES
+   GENERAL SECTIONS
 ================================== */
 
-section {
+main section {
     padding: 4rem 7%;
 }
 
@@ -237,7 +260,7 @@ section {
 }
 
 .section-description {
-    max-width: 600px;
+    max-width: 650px;
 
     margin: 0 auto;
 
@@ -263,7 +286,7 @@ section {
 
     gap: 1rem;
 
-    max-width: 800px;
+    max-width: 850px;
 
     margin: 0 auto;
     padding: 0;
@@ -281,15 +304,19 @@ section {
     border-radius: 25px;
 
     font-weight: bold;
+
+    transition: 0.2s;
 }
 
 #skills li:hover {
     background-color: #ffe1ec;
+
+    transform: translateY(-3px);
 }
 
 
 /* ==================================
-   LEARNING & PROGRESS
+   LEARNING AND PROGRESS
 ================================== */
 
 #learning {
@@ -317,10 +344,12 @@ section {
     border: 1px solid #f1c6d6;
     border-radius: 20px;
 
-    box-shadow: 0 7px 18px rgba(180, 102, 132, 0.08);
+    box-shadow:
+        0 7px 18px rgba(180, 102, 132, 0.08);
 }
 
 .info-card h3 {
+    margin-top: 8px;
     margin-bottom: 5px;
 
     font-size: 1.8rem;
@@ -338,24 +367,33 @@ section {
 
 
 /* ==================================
-   PROGRESS
+   PROGRESS BARS
 ================================== */
 
 .progress-section {
     margin-top: 2rem;
 }
 
-.progress-section p {
+.progress-item {
+    margin-bottom: 1rem;
+}
+
+.progress-name {
+    display: flex;
+
+    justify-content: space-between;
+
     margin-bottom: 5px;
 
+    color: #8f6073;
+
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
 .progress-bar {
     width: 100%;
     height: 14px;
-
-    margin-bottom: 1rem;
 
     background-color: #f6dce6;
 
@@ -372,19 +410,19 @@ section {
     border-radius: 10px;
 }
 
-.html {
+.html-progress {
     width: 85%;
 }
 
-.css {
+.css-progress {
     width: 80%;
 }
 
-.javascript {
+.javascript-progress {
     width: 55%;
 }
 
-.python {
+.python-progress {
     width: 65%;
 }
 
@@ -399,6 +437,7 @@ section {
 
 .project-grid {
     display: grid;
+
     grid-template-columns: 1fr;
 
     gap: 2rem;
@@ -421,14 +460,45 @@ section {
 
 .project-card:hover {
     transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(180, 102, 132, 0.12);
 }
 
-.project-card img {
+
+/* ==================================
+   PROJECT IMAGES
+================================== */
+
+.project-image {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
     width: 100%;
-    height: 210px;
+    height: 220px;
 
-    object-fit: cover;
+    padding: 10px;
+
+    background-color: white;
+
+    border-bottom: 1px solid #efc2d3;
 }
+
+.project-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* ==================================
+   PROJECT CONTENT
+================================== */
 
 .project-content {
     padding: 1.5rem;
@@ -437,13 +507,18 @@ section {
 .project-content h3 {
     margin-top: 0;
 
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+}
+
+.project-content p {
+    color: #735b66;
 }
 
 .tools {
     display: inline-block;
 
     margin-top: 10px;
+
     padding: 7px 12px;
 
     background-color: #ffe2ed;
@@ -455,38 +530,28 @@ section {
     font-weight: bold;
 }
 
-.ai-note {
-    margin-top: 1.2rem;
-    padding-top: 1rem;
-
-    border-top: 1px solid #efd3de;
-
-    color: #8c707b;
-
-    font-size: 0.8rem;
-}
-
-.ai-note a {
-    color: #bd5e83;
-
-    font-weight: bold;
-}
-
 
 /* ==================================
-   FUTURE
+   FUTURE ENDEAVORS
 ================================== */
 
 #future {
+    position: relative;
+
     background-color: #fff0f6;
+
+    overflow: hidden;
 }
 
 .future-box {
     position: relative;
 
+    z-index: 2;
+
     max-width: 750px;
 
     margin: 0 auto;
+
     padding: 3rem;
 
     background-color: white;
@@ -495,9 +560,18 @@ section {
     border-radius: 25px;
 
     text-align: center;
+
+    box-shadow:
+        0 7px 18px rgba(180, 102, 132, 0.08);
+}
+
+.future-box h2 {
+    margin-top: 5px;
 }
 
 .future-label {
+    margin-bottom: 0;
+
     color: #b66d88;
 
     font-size: 0.85rem;
@@ -506,18 +580,27 @@ section {
     letter-spacing: 2px;
 }
 
-.future-flower {
+.future-decoration {
     position: absolute;
 
-    top: -25px;
-    right: 30px;
+    font-size: 4rem;
 
-    font-size: 3.5rem;
+    opacity: 0.75;
+}
+
+.flower-future-left {
+    left: 7%;
+    bottom: 30px;
+}
+
+.flower-future-right {
+    right: 7%;
+    top: 30px;
 }
 
 
 /* ==================================
-   REFERENCES
+   FOOTER / REFERENCES
 ================================== */
 
 footer {
@@ -526,37 +609,68 @@ footer {
     background-color: #ffdce9;
 }
 
-footer h2 {
+.footer-title {
     text-align: center;
+}
+
+.footer-title > p {
+    margin-bottom: 0;
+
+    color: #a8657f;
+
+    font-size: 0.85rem;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.footer-title h2 {
+    margin-top: 5px;
 }
 
 .reference-box {
     max-width: 800px;
 
-    margin: 0 auto;
+    margin: 2rem auto 0;
+
     padding: 2rem;
 
     background-color: #fff7fa;
 
+    border: 1px solid #efc5d5;
     border-radius: 18px;
 }
 
-.reference-box h3 {
+.reference {
+    margin-bottom: 2rem;
+}
+
+.reference h3 {
     margin-bottom: 5px;
+}
+
+.reference p {
+    margin-top: 5px;
 }
 
 .reflection-note {
     margin-top: 2rem;
 
+    padding-top: 1rem;
+
+    border-top: 1px solid #efcbd8;
+
     font-weight: bold;
+
+    text-align: center;
 }
 
 .copyright {
     margin-top: 2rem;
 
-    text-align: center;
-
     color: #966077;
+
+    text-align: center;
 }
 
 
@@ -571,7 +685,8 @@ footer h2 {
     }
 
     .project-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
 }
@@ -595,12 +710,9 @@ footer h2 {
         flex-direction: row;
     }
 
-    #home {
-        flex-direction: row;
-    }
-
     .project-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns:
+            repeat(3, 1fr);
     }
 
 }
