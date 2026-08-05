@@ -716,3 +716,8 @@ footer {
     }
 
 }
+.project-link {
+    display: block;
+    width: fit-content;
+    margin-top: 14px;
+}
